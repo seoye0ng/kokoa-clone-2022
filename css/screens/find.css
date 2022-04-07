@@ -1,0 +1,125 @@
+.recommended-friends {
+  border-bottom: var(--main-border);
+  border-top: var(--main-border);
+  padding: 25px 0px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.recommended-friends span {
+  margin: 100px 0px;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: var(--gray);
+}
+
+.open-chat__header {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  margin: 25px 0px;
+}
+
+.open-chat__header span {
+  opacity: 0.8;
+}
+
+.open-chat__header i {
+  margin-left: 5px;
+  opacity: 0.8;
+}
+
+.open-post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /*동일 선상에 오게해줌*/
+}
+
+.open-post__title {
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.open-post__hashtags {
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+.open-post__members {
+  margin-top: 7px;
+  display: flex;
+  align-items: center;
+}
+
+.open-post__members img {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.open-post__count {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.open-post__members .devider {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 2px;
+  height: 15px;
+  margin: 0 5px;
+}
+
+.open-post__member-status {
+  color: #ffb0e0;
+}
+
+.open-post__photo {
+  position: relative;
+}
+
+.open-post__photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+}
+
+.open-post__heart-count {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 20px;
+  display: flex; /*왜하는거지?
+  --이걸 묶고있는 father가 flex로 이미 세로로 놓여서? 이건 가로로 만들어야되기 때문에?*/
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.open-post__heart-count span {
+  margin-left: 3px;
+}
+
+@keyframes heartBeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(1.5);
+  }
+  100% {
+    color: white;
+    transform: none;
+  }
+}
+
+.open-post__heart-count:hover i {
+  animation: heartBeat 1s linear infinite;
+  will-change: transform;
+}
